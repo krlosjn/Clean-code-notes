@@ -4,11 +4,6 @@
 
 ### Qué es el código limpio
 
-Cada lenguaje y paradigma de programación tiene su conjunto de matices, buenas prácticas, convenciones. EJ:
-
-* Java: camelCase
-* Python: snake_case
-
 > El código limpio puede resumirse como un código que cualquier desarrollador puede leer y modificar fácilmente.
 
 Referentes: Martin Fowler y Robert C Martin
