@@ -10,22 +10,6 @@ Referentes: Martin Fowler y Robert C Martin
 
 Cualquiera puede escribir código que un ordenador pueda entender, la clave es que otras personas puedan entenderlo.
 
-* Lenguaje de bajo nivel
-* Lenguaje ensamblador
-* Lenguaje de alto nivel
-    * Primera generación
-    * Segunda generación
-    * ....
-
-El código fuente será compilado/interpretado para un procesador concreto.
-
-Java:
-
-* Lenguaje de programación: Java SE
-* JVM
-* Biblioteca estándar (API)
-* Java EE (Jakarta EE): javax a jakarta
-
 Características:
 
 * Enfocado: debe escribirse para resolver un problema específico y nada más.
@@ -39,13 +23,6 @@ Ciclo de vida del software:
 * Testing: QA, TDD, BDD
 * Despliegue: devOps, devSecOps (AWS, GCP, DO, Azure)
 * Mantenimiento: monitorización
-
-Paradigmas:
-
-* Estructurada
-* POO
-* Funcional
-* Reactiva
 
 ### Por qué queremos el código limpio
 Problema **deuda técnica** y complejidad: el código acumula defectos, demasiada complejidad, desarrollos que no se han implementado de buena manera. Se forma un efecto de bola de nieve que se acumula y puede hacer que un proyecto de software, al cabo de 5 años sea insostenible económicamente.
