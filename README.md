@@ -384,6 +384,9 @@ assertExpectedActualEquals(expected, actual)
 
 ### 3.11. Objetos y listas de argumentos
 
+Cuando tengo argumentos que pueden representar un concepto propio, puedo crear un objeto y pasarlo como argumento en vez de pasar varios de ellos.
+En ocasiones tendremos que pasar un número variable de argumentos a una función.
+
 ```
 Circle makeCircle(double x, double y, double radius)
 
