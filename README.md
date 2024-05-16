@@ -1,4 +1,4 @@
-# Clean code en Java
+# Clean code Resumen
 
 ## 1. Código limpio
 
