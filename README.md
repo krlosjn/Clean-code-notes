@@ -216,7 +216,7 @@ public class Part{
 
 Se debe evitar el uso de codificaciones sobre las interfaces, como el caso de IShapeFactory. En general prefiera utilizar codificaciones para implementaciones concretas de una interfaz que sobre la propia interfaz.
 
-Mal: `IShapeFactory` (interfaz), `ShapeFactory` (implementación`)
+Mal: `IShapeFactory` (interfaz), `ShapeFactory` (implementación)
 
 Bien: `ShapeFactory` (interfaz ), `ShapeFactoryImp` (implementación`) o `ShapeFactoryImpl` (implementación`)
 ### 2.9. Asignación mental
