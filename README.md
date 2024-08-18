@@ -214,10 +214,11 @@ public class Part{
 
 ### 2.8. Interfaces e implementaciones
 
-Mal: `IShapeFactory`, `ShapeFactory`
+Se debe evitar el uso de codificaciones sobre las interfaces, como el caso de IShapeFactory. En general prefiera utilizar codificaciones para implementaciones concretas de una interfaz que sobre la propia interfaz.
 
-Bien: `ShapeFactory`, `ShapeFactoryImp` o `ShapeFactoryImpl`
+Mal: `IShapeFactory` (interfaz), `ShapeFactory` (implementación`)
 
+Bien: `ShapeFactory` (interfaz ), `ShapeFactoryImp` (implementación`) o `ShapeFactoryImpl` (implementación`)
 ### 2.9. Asignación mental
 
 En el contexto tradicional de los bucles ``for`` se suelen utilizar las letras ``i``, ``j``, ``k``, ``l``.
@@ -228,11 +229,12 @@ Pero en otros contextos no es buena idea utilizar variables de una sola letra qu
 
 Los métodos deberían ser verbos: ``postPayment()``, ``deletePage()``, ``save()``.
 
-Los métodos para acceder o cambiar debería ser: ``get``, ``set``, ``is``.
+Los métodos para acceder, cambiar, o evaluar debería ser: ``get``, ``set``, ``is``.
+getUser, setUser, isUser.
 
 En lugar de sobrecargar constructores es mejor usar:
 
-* Factorías que describan los argumentos
+* Factorías que describan los argumentos (patrón de diseño factory para construir objetos en demanda).
 * Patrón Builder
 
 ```java
@@ -254,7 +256,7 @@ delete()
 
 ### 2.12. Una palabra por concepto
 
-Ser consistente a la hora de nombrar, no utilizar distintas palabras para lo mismo de manera arbitraria:
+Ser consistente a la hora de nombrar, no utilizar distintas palabras para un mismo concepto, por ejemplo en clases diferentes de manera arbitraria:
 
 * get(), fetch(), retrieve(), find(), read(): Si todos hacen lo mismo en diferentes clases, lo mejor es nombrarlos igual en todas las clases.
 * CustomerController, EmployeeController. Evitar utilizar palabras distintas cuando en realidad es lo mismo: CustomerController, EmployeeManager, AccountDriver
@@ -265,7 +267,7 @@ Ser consistente a la hora de nombrar, no utilizar distintas palabras para lo mis
 
 ### 3.1. Funciones pequeñas
 
-2,3,4 líneas de código por función está bien. En general, cuantas menos líneas tenga mejor.
+2,3,4 líneas de código por función está bien. En general, cuantas menos líneas tenga, mejor.
 
 ### 3.2. Bloques e indentación
 Indentación es la sangría que aplicamos al código que está contenido en una estructura: if, else, switch, for, while.
@@ -274,8 +276,8 @@ Cada bloque debería tener una o dos líneas como mucho.
 
 ### 3.3. Las funciones deben tener una sola responsabilidad
 
-Cuando tienes más que un nivel de abstracción tu función suele servir para hacer demasiado. Crear varias funciones más pequeñas se debe a mejor reutilización y comprobación más fácil.
-Esta regla por mucho es la más importante en la ingeniería de software. Cuando las funciones sirven para hacer más que una sola cosa, se dificultan las pruebas, la composición y el entender. Cuando puedes aislar una función hasta tener solo una acción, se pueden mejorar más fácil y tu código llegue a ser mucho más limpio. Si solamente entiendes una cosa de esta guía, entiende esta regla y estarás adelantado de muchos desarrolladores.
+Cuando tienes más que un nivel de abstracción tu función suele servir para hacer demasiado. Crear varias funciones más pequeñas se debe a mejor reutilización y testearlas es más fácil.
+Esta regla por mucho es la más importante en la ingeniería de software. Cuando las funciones sirven para hacer más que una sola cosa, se dificultan las pruebas, la composición y el entenderlas. Cuando puedes aislar una función hasta tener solo una acción, se pueden mejorar más fácil y tu código llegue a ser mucho más limpio. Si solamente entiendes una cosa de esta guía, entiende esta regla y estarás adelantado de muchos desarrolladores.
 
 Mal
 
@@ -343,9 +345,9 @@ addMonthToDate(1, date)
 
 ### 3.8. Argumentos de funciones (2 o menos idealmente)
 
-Limitar la cantidad de parámetros de tus funciones es increíblemente importante ya que hace que tus pruebas del código sean más fáciles. Al pasar los 3 argumentos, llegarás a un escenario de una explosión combinatoria en que hay que comprobar con pruebas muchos casos únicos con un argumento separado.
+Limitar la cantidad de parámetros de tus funciones es increíblemente importante ya que hace que testear el código sean más fácil. Al pasar 3 argumentos, llegarás a un escenario de una explosión combinatoria en que hay que comprobar muchos casos únicos con un argumento separado.
 
-Uno o dos argumentos es la situación ideal, y más que eso uno debe evitar si es posible. Todo lo que se puede consolidar se debe consolidar. Normalmente, si tienes más que dos argumentos, tu función sirve para hacer demasiado. En otros casos, es mejor refactorizar y hacerlo un objeto para encapsular las funciones extras.
+Uno o dos argumentos es la situación ideal, y más que eso uno debe evitar si es posible. Todo lo que se puede consolidar se debe consolidar. Normalmente, si tienes más que dos argumentos, tu función sirve para hacer más de una sola cosa. En otros casos, es mejor refactorizar y hacerlo un objeto para encapsular las funciones extras.
 
 * cero (niládicas)
 * uno (monádico)
