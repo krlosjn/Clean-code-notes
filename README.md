@@ -40,6 +40,17 @@ Ventajas:
 * Solución de problemas más rápida
 * Comprensión más rápida: cualquier desarrollador nuevo en el proyecto se adapta antes.
 
+
+### Conceptos básicos de POO
+
+Encapsulamiento. cada objeto debe ser responsable de su propia información y de su propio estado, los atributos internos de un objeto deben ser inaccesibles desde afuera. Como se ocultan los detalles internos de un objeto, solo se permite su interacción a través de interfaces públicas generalmente llamadas cono getter y setter. La intención es controlar la forma como se accede al objeto.
+
+Abstracción. Ocultar detalles complejos de implementación y solo mostrar las carácteristicas esenciales de un objeto, podemos conocer atributos y comportamientos de un objeto. El encapsulamiento nos dice que no podemos modificar directamente los atributos de un objeto, pero si a través de métodos que cambien el estado, quien disponga del objeto sabe para qué sirve un comportamiento específico más no como lo hace. De esta manera los programadores pueden interactuar con objetos y sus comportamientos, sin preocuparse sobre sus implementaciones internas. 
+
+Herencia. Se basa en la reutilización de código, en esencia comportamientos y atributos entre clases. Definimos relaciones jerarquicas entre clases, de modo que carácteristicas y comportamientos en comunes se pueden compartir, sin necesidad de definir explicitamente estos.
+
+Polimorfismo.Nos dice que diferentes clases pueden responder a una interfaz o método de forma diferente. Permite que un mismo comportamiento se ejecute de distinta forma dependiento del tipo de objeto que lo invoque. Una forma de lograr esto es través de métodos abstractos que se creen que clases abstracta o interfaces y que ya cada clase que la implementa se encargue de crear una lógica particular para dicho comportamiento.
+
 ### Regla BoyScout
 
 > Deja el código más limpio de lo que lo encontraste.
