@@ -51,6 +51,10 @@ Herencia. Se basa en la reutilización de código, en esencia comportamientos y 
 
 Polimorfismo.Nos dice que diferentes clases pueden responder a una interfaz o método de forma diferente. Permite que un mismo comportamiento se ejecute de distinta forma dependiento del tipo de objeto que lo invoque. Una forma de lograr esto es través de métodos abstractos que se creen como clases abstracta o interfaces y que cada clase que la implementa se encargue de crear una lógica particular para dicho comportamiento.
 
+Serialización: Proceso donde se transforma el estado de un objeto (o datos) en una secuencia de bytes para almacenarlo o transmitirlo a la memoria, a una base de datos o a un archivo.
+
+Deserialización: Es el proceso donde una secuencia de bytes se transforma a un formato que se pueda interpretar a un objeto.
+
 ### Regla BoyScout
 
 > Deja el código más limpio de lo que lo encontraste.
